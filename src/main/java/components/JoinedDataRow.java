@@ -42,7 +42,8 @@ public class JoinedDataRow<K, V1, V2> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         JoinedDataRow<?, ?, ?> that = (JoinedDataRow<?, ?, ?>) o;
-        return Objects.equals(key, that.key) && Objects.equals(value1, that.value1) && Objects.equals(value2, that.value2);
+        return Objects.equals(key, that.key) && Objects.equals(value1, that.value1) &&
+                Objects.equals(value2, that.value2);
     }
 
     @Override

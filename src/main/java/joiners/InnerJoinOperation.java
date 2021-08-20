@@ -6,9 +6,11 @@ import components.JoinedDataRow;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class InnerJoinOperation<K, V1, V2> implements JoinOperation<DataRow<K, V1>, DataRow<K, V2>, JoinedDataRow<K, V1, V2>> {
+public class InnerJoinOperation<K, V1, V2> implements
+        JoinOperation<DataRow<K, V1>, DataRow<K, V2>, JoinedDataRow<K, V1, V2>> {
     @Override
-    public Collection<JoinedDataRow<K, V1, V2>> join(Collection<DataRow<K, V1>> leftCollection, Collection<DataRow<K, V2>> rightCollection) {
+    public Collection<JoinedDataRow<K, V1, V2>> join
+            (Collection<DataRow<K, V1>> leftCollection, Collection<DataRow<K, V2>> rightCollection) {
         Collection<JoinedDataRow<K, V1, V2>> result = new ArrayList<>();
 
         for(DataRow<K, V1> leftItem: leftCollection) {
